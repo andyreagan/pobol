@@ -1,6 +1,6 @@
 # pobol
 
-[![CI](https://github.com/andyreagan/pycobol/actions/workflows/ci.yml/badge.svg)](https://github.com/andyreagan/pycobol/actions/workflows/ci.yml)
+[![CI](https://github.com/andyreagan/pobol/actions/workflows/ci.yml/badge.svg)](https://github.com/andyreagan/pobol/actions/workflows/ci.yml)
 [![PyPI version](https://img.shields.io/pypi/v/pobol)](https://pypi.org/project/pobol/)
 
 Call COBOL programs as Python functions. Like [maturin](https://github.com/PyO3/maturin) for Rust, but for GnuCOBOL.
