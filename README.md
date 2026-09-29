@@ -37,10 +37,12 @@ print(report.file_info)
 # OUTPUTS:
 #   OUTPUT-FILE (54 bytes): OUT-CUST-ID, OUT-CUST-NAME, OUT-BALANCE, OUT-DISCOUNT
 
-result = report(input_file=[
-    {"IN-CUST-ID": 1, "IN-CUST-NAME": "Alice", "IN-BALANCE": 2500.00},
-    {"IN-CUST-ID": 2, "IN-CUST-NAME": "Bob",   "IN-BALANCE":  800.00},
-])
+result = report(
+    input_file=[
+        {"IN-CUST-ID": 1, "IN-CUST-NAME": "Alice", "IN-BALANCE": 2500.00},
+        {"IN-CUST-ID": 2, "IN-CUST-NAME": "Bob", "IN-BALANCE": 800.00},
+    ]
+)
 
 for rec in result.output_file:
     print(rec)
@@ -127,9 +129,11 @@ header_bytes = header_copybook.encode(header_dict)
 detail_bytes = detail_copybook.encode_many(detail_dicts)
 trailer_bytes = trailer_copybook.encode(trailer_dict)
 
-result = prog(raw_files={
-    "TXN-DATA-FILE": header_bytes + detail_bytes + trailer_bytes,
-})
+result = prog(
+    raw_files={
+        "TXN-DATA-FILE": header_bytes + detail_bytes + trailer_bytes,
+    }
+)
 ```
 
 ## API Reference
